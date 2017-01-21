@@ -1,12 +1,17 @@
+import {
+  TOGGLE,
+  INDIVIDUAL,
+} from '../constants/ActionTypes'
+
 const initialState = {
-  tab: 'Individuals',
+  tab: INDIVIDUAL,
   location: 'Ottawa',
   event: '',
 }
 
 const queries = (state = initialState, action) => {
   switch (action.type) {
-    case 'TOGGLE':
+    case TOGGLE:
       return {
         ...state,
         [queries.tab]: action.tab,
