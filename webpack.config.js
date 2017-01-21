@@ -16,13 +16,7 @@ module.exports = {
   devServer: {
     contentBase: './public/',
   },
-  eslint: { configFile: './.eslintrc.json' },
   module: {
-    preLoaders: [{
-      test: /.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'eslint-loader',
-    }],
     loaders: [{
       test: /.jsx?$/,
       exclude: /node_modules/,
