@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+
 dotenv.config({ silent: true })
 
 const authRoutes = require('./routes/auth')
