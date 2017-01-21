@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const passport = require('passport')
 
 dotenv.config({ silent: true })
 
@@ -16,6 +17,8 @@ const PORT = process.env.PORT
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(`${__dirname}/public`))
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use('/', authRoutes)
 
