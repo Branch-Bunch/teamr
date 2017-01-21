@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-
+const path = require('path')
 const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
@@ -11,6 +11,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
+  resolveLoader: { root: path.join(__dirname, 'node_modules') },
   devServer: {
     contentBase: './public/',
   },
