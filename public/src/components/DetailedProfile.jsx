@@ -1,3 +1,19 @@
-import React from 'react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import React, { PropTypes } from 'react'
 
+import { Grid, Row, Image } from 'react-bootstrap'
+
+const DetailedProfile = ({ imageUrl, bio, name, }) => (
+  <Grid>
+    <Row className='detailed-grid'>
+    </Row>
+  </Grid>
+)
+
+DetailedProfile.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  // TODO add tags as array of strings
+}
+
+export default DetailedProfile

@@ -4,7 +4,7 @@ import { toggleTab, fetchUser } from '../actions'
 import { USER, TEAM } from '../constants/ActionTypes'
 import CardList from '../components/CardList'
 
-const CardContainer = ({users, fetchUser }) => {
+const CardContainer = ({ users, fetchUser }) => {
   return (
     <CardList
       cards={users}

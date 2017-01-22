@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import DetailedProfile from '../components/DetailedProfile'
 
 // TODO: Impliment
-const DetailedContainer = () => (
-  <h1>
-    DetailedContainer
-  </h1>
+const DetailedContainer = ({ user }) => (
+    <DetailedProfile
+      { ...user }
+    />
 )
 
 const mapStateToProps = state => ({
