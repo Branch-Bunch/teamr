@@ -1,11 +1,17 @@
-import { TOGGLE } from '../constants/ActionTypes'
+import {
+  TOGGLE_TAB,
+  UPDATE_USERS,
+} from '../constants/ActionTypes'
 
-const toggleTab = tab =>
+export const toggleTab = tab => (
   dispatch => dispatch({
     type: TOGGLE,
-    queries: {
-      tab,
-    },
+    tab,
   })
+)
 
-export default toggleTab
+export const updateUsers = () => dispatch => {
+  return fetch('/users')
+    .then(res => res.json())
+    .then(users => dispatch({ type: UPDATE_USERS, users })
+}

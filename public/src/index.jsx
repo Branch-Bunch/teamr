@@ -6,6 +6,7 @@ import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 import reducer from './reducers'
 import App from './containers/App'
+import { updateUsers } from './actions'
 
 const middleware = [
   thunk,
@@ -19,6 +20,8 @@ const store = createStore(
   reducer,
   applyMiddleware(...middleware),
 )
+
+store.dispatch(updateUsers())
 
 ReactDOM.render(
   <Provider store={store}>

@@ -4,9 +4,11 @@ import {
 } from '../constants/ActionTypes'
 
 const initialState = {
-  tab: USER,
-  location: 'Ottawa',
-  event: '',
+  queries: {
+    tab: USER,
+    location: 'Ottawa',
+    event: '',
+  }
 }
 
 const queries = (state = initialState, action) => {
