@@ -4,11 +4,9 @@ import {
 } from '../constants/ActionTypes'
 
 const initialState = {
-  queries: {
-    tab: USER,
-    location: 'Ottawa',
-    event: '',
-  }
+  tab: USER,
+  location: 'Ottawa',
+  event: '',
 }
 
 const queries = (state = initialState, action) => {
@@ -16,7 +14,7 @@ const queries = (state = initialState, action) => {
     case TOGGLE_TAB:
       return {
         ...state,
-        [queries.tab]: action.tab,
+        tab: action.tab,
       }
     default:
       return state

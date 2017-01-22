@@ -7,7 +7,7 @@ const initialState = {
   teamsById: [],
 }
 
-const teams = (state = initialState, action) => {
+export const teams = (state = initialState.teams, action) => {
   switch (action.type) {
     case UPDATE_TEAMS:
       const teams = action.teams.reduce((acc, team) => ({
@@ -17,11 +17,20 @@ const teams = (state = initialState, action) => {
       return {
         ...state,
         teams,
-        teamsById: action.team.map(team => team._id)
       }
     default:
       return state
   }
 }
 
-export default teams
+export const teamsById = (state = initialState.teamsById, action) => {
+  switch (action.type) {
+    case UPDATE_TEAMS:
+      return {
+        ...state,
+        teamsById: action.team.map(team => team._id)
+      }
+    default:
+      return state
+  }
+}
