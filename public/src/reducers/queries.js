@@ -1,10 +1,10 @@
 import {
   TOGGLE,
-  INDIVIDUAL,
+  USER,
 } from '../constants/ActionTypes'
 
 const initialState = {
-  tab: INDIVIDUAL,
+  tab: USER,
   location: 'Ottawa',
   event: '',
 }
