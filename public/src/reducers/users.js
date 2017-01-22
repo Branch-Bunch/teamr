@@ -1,10 +1,13 @@
 import {
   UPDATE_USERS,
+  FETCH_USER,
 } from '../constants/ActionTypes'
 
 const initialState = {
   users: {},
   usersById: [],
+  selectedUser: -1,
+  selectedTeam: -1,
 }
 
 export const users = (state = initialState.users, action) => {
@@ -19,6 +22,9 @@ export const users = (state = initialState.users, action) => {
         ...state,
         users,
       }
+    case FETCH_USER:
+      const id = action.users.id
+      return { ...state, selectedUser: id }
     default:
       return state
   }

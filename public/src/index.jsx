@@ -29,4 +29,3 @@ ReactDOM.render(
 )
 
 store.dispatch(updateUsers())
-
