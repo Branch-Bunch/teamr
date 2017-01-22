@@ -11,7 +11,7 @@ const isLoggedIn = (req, res, next) => {
 router.get('/auth/github', githubPassport.authenticate('github', { scope: ['user:email'] }))
 
 router.get('/auth/github/callback', githubPassport.authenticate('github', { failureRedirect: '/' }), (req, res) => {
-  res.send(req.user)
+  res.redirect('/')
 })
 
 module.exports = {
