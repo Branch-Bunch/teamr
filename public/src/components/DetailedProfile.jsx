@@ -6,6 +6,7 @@ const DetailedProfile = ({
   bio,
   name,
   email,
+  location,
 }) => (
   <Grid>
     <Row>
@@ -20,17 +21,20 @@ const DetailedProfile = ({
       {bio}
     </Row>
     <Row>
-      <p>
-        Contact me: {email}
-      </p>
+      {email}
+    </Row>
+    <Row>
+      {location}
     </Row>
   </Grid>
 )
 
 DetailedProfile.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
+  name: PropTypes.string,
+  bio: PropTypes.string,
+  email: PropTypes.string,
+  location: PropTypes.string,
   // TODO add tags as array of strings
 }
 
