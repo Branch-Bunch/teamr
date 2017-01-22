@@ -17,10 +17,17 @@ passport.use(new GithubStrategy({
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
   callbackURL: process.env.BASE_URL + process.env.GITHUB_CALLBACK_PATH,
 }, (accessToken, refreshToken, profile, done) => {
-  console.log(profile)
+  const { name, bio, email, location } = profile._json
+  const imageUrl = profile._json.avatar_url
   Users.findOneAndUpdate(
-    { name: profile.displayName },
-    { name: profile.displayName },
+    { email },
+    {
+      name,
+      bio,
+      email,
+      location,
+      imageUrl,
+    },
     { upsert: true })
     .then(user => done(null, user))
     .catch(err => done(err))
