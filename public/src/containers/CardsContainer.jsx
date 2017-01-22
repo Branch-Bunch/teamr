@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleTab } from '../actions'
+import { toggleTab, fetchUser } from '../actions'
 import { USER, TEAM } from '../constants/ActionTypes'
 import CardList from '../components/CardList'
 
-const CardContainer = ({ tab, users, teams }) => {
+const CardContainer = ({users, fetchUser }) => {
   return (
     <CardList
       cards={users}
+      onClick={fetchUser}
     />
   )
 }
@@ -20,5 +21,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { toggleTab },
+  { toggleTab, fetchUser },
 )(CardContainer)

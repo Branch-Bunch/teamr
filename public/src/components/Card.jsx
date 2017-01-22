@@ -1,11 +1,14 @@
 import React, { PropTypes } from 'react'
 import { Grid, Row, Col, Image } from 'react-bootstrap'
 
-const Card = ({ name, location, imageUrl }) => (
+const Card = ({ _id, name, location, imageUrl, onClick }) => (
   <Grid>
     <Row className="show-grid">
       <Col xs={4} md={3}>
-        <Image src={imageUrl} responsive />
+        <Image
+          src={imageUrl}
+          onClick={() => onClick(_id)}
+        />
       </Col>
       <Col xs={4} md={3}>
         {name}

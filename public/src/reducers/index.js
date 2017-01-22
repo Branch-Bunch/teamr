@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import queries from './queries'
-import { users, usersById } from './users'
+import { users, usersById, selectedUser } from './users'
 import { teams, teamsById } from './teams'
 
 export default combineReducers({
@@ -9,4 +9,5 @@ export default combineReducers({
   usersById,
   teams,
   teamsById,
+  selectedUser,
 })

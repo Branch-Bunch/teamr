@@ -6,7 +6,7 @@ import {
 const initialState = {
   users: {},
   usersById: [],
-  selectedUser: -1,
+  selectedUser: {},
   selectedTeam: -1,
 }
 
@@ -18,19 +18,25 @@ export const users = (state = initialState.users, action) => {
         [user._id]: user,
       }), state.users)
       return users
-    case FETCH_USER:
-      const id = action.users.id
-      return { ...state, selectedUser: id }
     default:
       return state
   }
 }
 
-export const usersById  = (state = initialState.usersById, action) => {
+export const usersById = (state = initialState.usersById, action) => {
   switch (action.type) {
     case UPDATE_USERS:
       return action.users.map(user => user._id)
     default:
+      return state
+  }
+}
+
+export const selectedUser = (state = initialState.selectedUser, action) => {
+  switch (action.type) {
+    case FETCH_USER:
+      return action.user
+    default: 
       return state
   }
 }

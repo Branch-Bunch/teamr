@@ -21,6 +21,6 @@ export const updateUsers = () => dispatch => {
 export const fetchUser = id => dispatch => {
   return fetch(`/users/${id}`)
     .then(res => res.json())
-    .then(users => dispatch({ type: FETCH_USER, users }))
+    .then(user => dispatch({ type: FETCH_USER, user }))
     .catch(err => console.log(err))
 }
