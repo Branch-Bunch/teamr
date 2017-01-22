@@ -24,4 +24,4 @@ const App = () => (
 )
 
 export default connect(
-)(App)
+null)(App)
