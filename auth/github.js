@@ -17,7 +17,7 @@ passport.use(new GithubStrategy({
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
   callbackURL: process.env.BASE_URL + process.env.GITHUB_CALLBACK_PATH,
 }, (accessToken, refreshToken, profile, done) => {
-  console.log(profile_.json)
+  console.log(profile._json)
   const { name, bio, email, location } = profile._json
   const imageUrl = profile._json.avatar_url
   console.log(name, bio, email, location)
