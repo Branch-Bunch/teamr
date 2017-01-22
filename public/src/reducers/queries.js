@@ -12,10 +12,12 @@ const initialState = {
 const queries = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE:
-      console.log({...state})
-      return { ...state, [queries.tab]: action.tab, }
+      return {
+        ...state,
+        [queries.tab]: action.tab,
+      }
     default:
-      return { ...state }
+      return state
   }
 }
 
