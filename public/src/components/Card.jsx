@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Grid, Row, Col, Image } from 'react-bootsrap'
+import { Grid, Row, Col, Image } from 'react-bootstrap'
 const Card = ({ picture, name, location, onClick }) => (
   <Grid>
     <Row className="show-grid">
