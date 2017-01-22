@@ -13,11 +13,8 @@ export const teams = (state = initialState.teams, action) => {
       const teams = action.teams.reduce((acc, team) => ({
         ...acc,
         [team._id]: team,
-      }), {})
-      return {
-        ...state,
-        teams,
-      }
+      }), state.teams) 
+      return teams
     default:
       return state
   }

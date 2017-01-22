@@ -16,12 +16,8 @@ export const users = (state = initialState.users, action) => {
       const users = action.users.reduce((acc, user) => ({
         ...acc,
         [user._id]: user,
-      }), {})
-
-      return {
-        ...state,
-        users,
-      }
+      }), state.users)
+      return users
     case FETCH_USER:
       const id = action.users.id
       return { ...state, selectedUser: id }
