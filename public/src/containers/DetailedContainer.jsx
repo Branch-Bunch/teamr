@@ -1,15 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleTab } from '../actions'
 
-const TabContainer = () => ()
+const DetailedComponent () => ()
 
 const mapStateToProps = state => ({
-  queries: state.queries,
+  user: state.users[state.selectedUser],
+  team: state.teams[state.selectedTeam]
 })
 
 export default connect(
   mapStateToProps,
-  { toggleTab },
-)(TabContainer)
-
+)(DetailedComponent)
