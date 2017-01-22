@@ -6,7 +6,6 @@ const CardList = ({ cards }) => (
     <Card
       {...card}
       key={card._id}
-      index={index + 1}
     />
   ))
 )
