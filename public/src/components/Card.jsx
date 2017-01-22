@@ -2,22 +2,19 @@ import React, { PropTypes } from 'react'
 import { Grid, Row, Col, Image } from 'react-bootstrap'
 
 const Card = ({ _id, name, location, imageUrl, onClick }) => (
-  <Grid>
-    <Row className="show-grid">
-      <Col xs={4} md={3}>
+  <div style={{marginTop: "20px"}}>
+    <Col md={2} mdOffset{1}>
+      <Row>
         <Image
           src={imageUrl}
           onClick={() => onClick(_id)}
         />
-      </Col>
-      <Col xs={4} md={3}>
+      </Row>
         {name}
-      </Col>
-      <Col xs={4} md={3}>
         {location}
-      </Col>
-    </Row>
-  </Grid>
+      </Row>
+    </Col>
+  </div>
 )
 
 Card.propTypes = {

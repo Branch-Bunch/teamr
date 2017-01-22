@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 const CardList = ({ cards, onClick }) => {
   const cardList = cards.map(testname => (
@@ -12,7 +13,9 @@ const CardList = ({ cards, onClick }) => {
 
   return (
     <div>
-      {cardList}
+      <Col>
+          {cardList}
+      </Col>
     </div>
   )
 }
