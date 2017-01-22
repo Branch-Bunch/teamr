@@ -1,5 +1,4 @@
 const webpack = require('webpack')
-const path = require('path')
 
 const debug = process.env.NODE_ENV !== 'production'
 
@@ -12,7 +11,6 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
-  resolveLoader: { root: path.join(__dirname, 'node_modules') },
   devServer: {
     contentBase: './public/',
   },
@@ -22,7 +20,7 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'react'],
+        presets: ['es2015', 'react', 'stage-3'],
       },
     }],
   },
@@ -41,4 +39,3 @@ module.exports = {
     }),
   ],
 }
-
