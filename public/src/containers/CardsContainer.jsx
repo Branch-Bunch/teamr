@@ -12,12 +12,11 @@ const CardContainer = ({ tab, users, teams }) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
+const mapStateToProps = state => ({
   tab: state.queries.tab,
   users: state.usersById.map(id => state.users[id]),
   teams: state.teamsById.map(id => state.teams[id]),
-}}
+})
 
 export default connect(
   mapStateToProps,
