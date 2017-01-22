@@ -1,5 +1,5 @@
 import {
-  TOGGLE,
+  TOGGLE_TAB,
   USER,
 } from '../constants/ActionTypes'
 
@@ -11,7 +11,7 @@ const initialState = {
 
 const queries = (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE:
+    case TOGGLE_TAB:
       return {
         ...state,
         [queries.tab]: action.tab,
