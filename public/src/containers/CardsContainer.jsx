@@ -21,4 +21,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { toggleTab },
-)
+)(CardContainer)

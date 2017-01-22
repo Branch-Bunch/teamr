@@ -21,11 +21,12 @@ const store = createStore(
   applyMiddleware(...middleware),
 )
 
-store.dispatch(updateUsers())
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root'),
 )
+
+store.dispatch(updateUsers())
+
