@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // TODO: Impliment
-const DetailedComponent = () => (
+const DetailedContainer = () => (
   <h1>
-    DetailedComponent
+    DetailedContainer
   </h1>
 )
 
@@ -16,4 +16,4 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-)(DetailedComponent)
+)(DetailedContainer)
