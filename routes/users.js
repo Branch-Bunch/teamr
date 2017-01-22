@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
     .then((users) => {
       const normalized = users.map((user) => {
         return {
-          id: user._id,
+          _id: user._id,
           name: user.name,
           location: user.location,
           imageUrl: user.imageUrl,

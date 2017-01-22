@@ -12,12 +12,16 @@ const users = (state = initialState, action) => {
     case UPDATE_USERS:
       const users = action.users.reduce((acc, user) => ({
         ...acc,
-        [user.id]: user,
+        [user._id]: user,
       }), {})
       return {
         ...state,
         users,
-        usersById: action.users.map(user => user.id)
+        usersById: action.users.map(user => user._id)
       }
+    default:
+      return state
   }
 }
+
+export default users

@@ -13,5 +13,6 @@ export const toggleTab = tab => (
 export const updateUsers = () => dispatch => {
   return fetch('/users')
     .then(res => res.json())
-    .then(users => dispatch({ type: UPDATE_USERS, users })
+    .then(users => dispatch({ type: UPDATE_USERS, users }))
+    .catch(err => console.log(err))
 }
