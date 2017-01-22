@@ -3,18 +3,15 @@ import { connect } from 'react-redux'
 import { Grid, Row, Col } from 'react-bootstrap'
 import CardContainer from './CardsContainer'
 import DetailedContainer from './DetailedContainer'
-import CardList from '../components/CardList'
 
 const App = () => (
   <Grid>
     <Row>
       <Col>
-        // <CardContainer />
-        <CardList />
+        <CardContainer />
       </Col>
       <Col>
-        //<DetailedContainer />
-        <h1> .... </h1>
+        <DetailedContainer />
       </Col>
     </Row>
   </Grid>

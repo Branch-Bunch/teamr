@@ -5,22 +5,11 @@ import { USER, TEAM } from '../constants/ActionTypes'
 import CardList from '../components/CardList'
 
 const CardContainer = ({ tab, users, teams }) => {
-  switch (tab) {
-    case USER: 
-      return (
-        <CardList
-          cards={users}
-        />
-      )
-    case TEAM:
-      // TODO: Teamlist componet
-      return
-    default:
-      return (
-        <p>
-          No Users or Teams!
-        </p>
-      )
+  return (
+    <CardList
+      cards={users}
+    />
+  )
 }
 
 const mapStateToProps = state => ({
@@ -32,4 +21,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { toggleTab },
-)(CardContainer)
+)
