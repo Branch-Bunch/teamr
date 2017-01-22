@@ -3,13 +3,13 @@ import { Grid, Row, Col, Image } from 'react-bootstrap'
 
 const Card = ({ _id, name, location, imageUrl, onClick }) => (
   <div style={{marginTop: "20px"}}>
-    <Col md={2} mdOffset{1}>
+    <Col md={2} mdOffset={1}>
       <Row>
         <Image
           src={imageUrl}
           onClick={() => onClick(_id)}
+          responsive
         />
-      </Row>
         {name}
         {location}
       </Row>
