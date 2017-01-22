@@ -2,17 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import DetailedProfile from '../components/DetailedProfile'
 
-// TODO: Impliment
 const DetailedContainer = ({ user }) => (
     <DetailedProfile
-      { ...user }
+      {...user}
     />
 )
 
 const mapStateToProps = state => ({
-  tab: state.queries.tab,
-  user: state.users[state.selectedUser],
-  team: state.teams[state.selectedTeam],
+  user: state.selectedUser,
 })
 
 export default connect(
