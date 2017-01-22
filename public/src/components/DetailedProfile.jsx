@@ -5,6 +5,9 @@ import { Grid, Row, Image } from 'react-bootstrap'
 const DetailedProfile = ({ imageUrl, bio, name, }) => (
   <Grid>
     <Row className='detailed-grid'>
+      <Image 
+        src={imageUrl}
+      />
     </Row>
   </Grid>
 )
