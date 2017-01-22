@@ -6,11 +6,11 @@ import DetailedContainer from './DetailedContainer'
 
 const App = () => (
   <Grid>
-    <Row>
-      <Col md={6}>
+    <Row class="show-grid">
+      <Col lg={8}>
         <CardContainer />
       </Col>
-      <Col md={6}>
+      <Col lg={3}>
         <DetailedContainer />
       </Col>
     </Row>

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Grid, Row, Image } from 'react-bootstrap'
+import { Grid, Col, Row, Image } from 'react-bootstrap'
 
 const DetailedProfile = ({
   imageUrl,
@@ -9,23 +9,31 @@ const DetailedProfile = ({
   location,
 }) => (
   <Grid>
-    <Row>
-      <Image 
-        src={imageUrl}
-      />
-    </Row>
-    <Row>
-      {name}
-    </Row>
-    <Row>
-      {bio}
-    </Row>
-    <Row>
-      {email}
-    </Row>
-    <Row>
-      {location}
-    </Row>
+  <Col lg={4}>
+      <Row lg={4}>
+        <Image
+          src={imageUrl}
+          responsive
+          style={{marginTop: "20px"}}
+        />
+      </Row>
+      <Row lg={3}
+        style={{
+        fontWeight:"bold",
+        color:"#ff8080",
+        fontSize:"30"}}>
+        {name}
+      </Row>
+      <Row lg={3} style={{color:"#62d196"}}>
+        {bio}
+      </Row>
+      <Row lg={3} style={{color:"#c991e1"}}>
+        {email}
+      </Row>
+      <Row lg={3} style={{color:"#63f2f1"}}>
+        {location}
+      </Row>
+    </Col>
   </Grid>
 )
 
