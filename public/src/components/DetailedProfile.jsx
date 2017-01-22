@@ -5,6 +5,7 @@ const DetailedProfile = ({
   imageUrl,
   bio,
   name,
+  email,
 }) => (
   <Grid>
     <Row>
@@ -17,6 +18,11 @@ const DetailedProfile = ({
     </Row>
     <Row>
       {bio}
+    </Row>
+    <Row>
+      <p>
+        Contact me: {email}
+      </p>
     </Row>
   </Grid>
 )
