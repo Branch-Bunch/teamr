@@ -2,15 +2,16 @@ import React from 'react'
 import Card from './Card'
 
 const CardList = ({ cards }) => {
-  const cardList = cards.map((card, index) => (
+  const cardList = cards.map(testname => (
     <Card
-      {...card}
-      key={card._id}
+      {...testname}
+      key={testname._id}
     />
   ))
+
   return (
     <div>
-      {cards}
+      {cardList}
     </div>
   )
 }

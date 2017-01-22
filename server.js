@@ -22,7 +22,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use('/', authRoutes.router)
-app.use('/users', authRoutes.isLoggedIn, usersRoute.router)
+app.use('/users', usersRoute.router)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)

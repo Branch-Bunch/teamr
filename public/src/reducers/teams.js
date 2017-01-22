@@ -26,10 +26,7 @@ export const teams = (state = initialState.teams, action) => {
 export const teamsById = (state = initialState.teamsById, action) => {
   switch (action.type) {
     case UPDATE_TEAMS:
-      return {
-        ...state,
-        teamsById: action.team.map(team => team._id)
-      }
+      return action.team.map(team => team._id)
     default:
       return state
   }

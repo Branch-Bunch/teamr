@@ -33,10 +33,7 @@ export const users = (state = initialState.users, action) => {
 export const usersById  = (state = initialState.usersById, action) => {
   switch (action.type) {
     case UPDATE_USERS:
-      return {
-        ...state,
-        usersById: action.users.map(user => user._id)
-      }
+      return action.users.map(user => user._id)
     default:
       return state
   }

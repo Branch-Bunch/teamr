@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
 import { Grid, Row, Col, Image } from 'react-bootstrap'
 
-const Card = ({ picture, name, location, onClick }) => (
+const Card = ({ name, location, imageUrl }) => (
   <Grid>
     <Row className="show-grid">
       <Col xs={4} md={3}>
-        <Image src={picture} responsive />
+        <Image src={imageUrl} responsive />
       </Col>
       <Col xs={4} md={3}>
         {name}
@@ -18,10 +18,9 @@ const Card = ({ picture, name, location, onClick }) => (
 )
 
 Card.propTypes = {
-  picture: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
 }
 
 export default Card
