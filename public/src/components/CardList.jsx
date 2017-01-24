@@ -13,11 +13,8 @@ const CardList = ({ cards, onClick }) => {
 
   return (
     <div>
-      <h1> 
-        Users looking for teams
-      </h1>
       <Col>
-          {cardList}
+        {cardList}
       </Col>
     </div>
   )
