@@ -8,6 +8,7 @@ dotenv.config({ silent: true })
 
 const authRoutes = require('./routes/auth')
 const usersRoute = require('./routes/users')
+const teamsRoute = require('./routes/teams')
 
 const app = express()
 mongoose.connect(process.env.MONGODB_URI)
@@ -23,6 +24,8 @@ app.use(passport.session())
 
 app.use('/', authRoutes.router)
 app.use('/users', usersRoute.router)
+app.use('/teams', teamsRoute.router)
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
